@@ -1,4 +1,4 @@
-## C++ text code to machine executable code 00110011 (Mac OS-X example)
+## C++ text code to machine executable code `00110011` (Mac OS-X example)
 
 ### Let create c++ file in any editor with source code
 
