@@ -55,7 +55,7 @@ We can see binary output with hexdump `hexdump -C AfterAssemblyStepObjectFile.o`
 ------
 
 ### Compilation STEP 4. Linking to exacutable file
-ld -arch x86_64 -macosx_version_min 10.12 -dynamic -lSystem -o program AfterAssemblyStepObjectFile.o
+`ld -arch x86_64 -macosx_version_min 10.12 -dynamic -lSystem -o program AfterAssemblyStepObjectFile.o`
 
 Important options:
   - Dynamic linking with OS-X system libraries `-dynamic -lSystem`
