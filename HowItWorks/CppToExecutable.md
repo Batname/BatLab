@@ -26,6 +26,7 @@ int main(int argc, const char* argv[])
 
 printf function [documentation](http://www.cplusplus.com/reference/cstdio/printf/)
 
+------
 
 ### Compilation STEP 1. C++ preprocessor step
 `g++ -Wall -std=c++11 -arch x86_64 -mmacosx-version-min=10.12 -E -P -o AfterPreprocessingStepSource.cpp source.cpp`
@@ -34,6 +35,7 @@ If you want to see full preprocessor output with line number information remove 
 
 Information about [preprocessor output](https://gcc.gnu.org/onlinedocs/gcc-4.3.6/cpp/Preprocessor-Output.html)
 
+------
 
 ### Compilation STEP 2. C++ compilation to assembly code
 
@@ -43,12 +45,14 @@ OS-X [assembly language](https://developer.apple.com/library/prerelease/content/
 
 Helpful article about OS-X [assembly language syntax](http://www.idryman.org/blog/2014/12/02/writing-64-bit-assembly-on-mac-os-x/)
 
+------
 
 ### Compilation STEP 3. Assembly compilation to object binary code
 `as -arch x86_64 -o AfterAssemblyStepObjectFile.o AfterCompileStepSource.s`
 
 We can see binary output with hexdump `hexdump -C AfterAssemblyStepObjectFile.o`
 
+------
 
 ### Compilation STEP 4. Linking to exacutable file
 ld -arch x86_64 -macosx_version_min 10.12 -dynamic -lSystem -o program AfterAssemblyStepObjectFile.o
@@ -59,6 +63,7 @@ Important options:
 
 We can see executable output with hexdump `hexdump -C program`
 
+------
 
 ### All in one step with full g++ compilation
 `g++ -Wall -std=c++11 -arch x86_64 -mmacosx-version-min=10.12 -o program source.cpp`
